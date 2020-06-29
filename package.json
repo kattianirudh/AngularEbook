@@ -40,7 +40,10 @@
     "epubjs": "^0.2.21"
   },
   "dependencies": {
-    "epubjs": "^0.2.21"
+    "@angular/cdk": "^10.0.0",
+    "@angular/material": "^10.0.0",
+    "epubjs": "^0.2.21",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@angular/animations": "^5.2.0",

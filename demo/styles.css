@@ -1,16 +1,17 @@
 * {
-  box-sizing: border-box;
-}
+    box-sizing: border-box;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
 
-html {
-  height: 100%;
-  width: 100%;
-  font-family: sans-serif;
-  background: #333;
-}
-
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
+    padding: 2%;
+  }

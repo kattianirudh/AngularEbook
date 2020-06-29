@@ -1,0 +1,31 @@
+<app-add-book (bookCollectionEvent)="updateBookCollection($event)"></app-add-book>
+<!-- <button class="settings" (click)="toggleSettings">Settings</button>
+<div class="settings-box">
+  <span class="font"></span>
+  <input type="number" class="font-size">
+
+</div> -->
+
+<!-- This is the component that lists the books in the library. -->
+<div class="book-list-component">
+    <div class="book-list-header bm-5">
+      <h2><b>My Book Collection.</b></h2>
+    </div>
+    <!-- In case there are no books -->
+    <div class="no-books bm-5" *ngIf="bookCollection.length===0">
+      No books are avaiable. Please add some!
+    </div>
+    <div class="book-list bm-5" *ngIf="bookCollection.length>0">
+      <h3><b>Book List</b></h3>
+      <div class="book-list-parent" *ngFor="let book of bookCollection;let i=index">
+          <app-book [book]="book" [index]="i" (readBookEvent)="readBook($event)" (bookmarkEvent)="bookmarkBook($event)" (deleteBookEvent)="deleteBook($event)"></app-book>
+      </div>
+    </div>
+    <hr>
+    <div class="bookmark-list" *ngIf="bookmark.length>0">
+      <h3><b>Bookmarks</b></h3>
+      <div class="book-list-parent" *ngFor="let book of bookmark;let i=index">
+          <app-book [book]="book" [index]="i" (readBookEvent)="readBook($event)" (bookmarkEvent)="bookmarkBook($event)" (deleteBookEvent)="deleteBookmark($event)" [bookmarkFlag]="bookmarkFlagValue"></app-book>
+      </div>
+    </div>
+</div>

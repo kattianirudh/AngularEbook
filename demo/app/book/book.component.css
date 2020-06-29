@@ -1,0 +1,56 @@
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.book-component {
+    border: 2px lightgray;
+    width: max-content;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.style-button {
+    width: 40%;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+}
+.read-book {
+    background-color: lightseagreen;
+    color: white;
+    box-shadow: 0 4px 16px 4px rgba(17,22,26,.16),0 4px 8px 0 rgba(17,22,26,.08),0 16px 24px 0 rgba(17,22,26,.08);
+}
+
+.delete-book {
+    background-color: red;
+    color: white;
+    box-shadow: 0 4px 16px 4px rgba(139,0,0,.16),0 4px 8px 0 rgba(139,0,0,.08),0 16px 24px 0 rgba(139,0,0,.08);
+    
+}
+
+.bookmark {
+    /* width: 52%!important; */
+    background-color: lightgreen;
+    margin-top: 10px;
+    box-shadow: 0 4px 16px 4px rgba(144,238,144,.16),0 4px 8px 0 rgba(144,238,144,.08),0 16px 24px 0 rgba(144,238,144,.08);
+
+}
+
+.book-component {
+    padding: 1%;
+    border-radius: 10px;
+    width: 20%;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.book-title {
+    border-bottom: 1px solid gray;
+    padding-bottom: 5%;
+
+}

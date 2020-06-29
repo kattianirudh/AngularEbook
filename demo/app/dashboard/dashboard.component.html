@@ -1,0 +1,26 @@
+<!-- This is the page which houses all the components -->
+<div class="navbar" *ngIf="!showBookList">
+  <app-nav-bar (backEvent)="back($event)"></app-nav-bar>
+</div>
+<div class="content" role="main">
+  <!-- Shows the list of books in the library  -->
+  <div class="show-list" *ngIf="showBookList">
+    <app-book-list 
+      (readBookEvent)="readBook($event)" (collection)="setCollection($event)" (collection)="setBookmark($event)" [bookCollection]="bookCollection" [bookmark]="bookmark">
+    </app-book-list>
+  </div>
+  <div class="readBook" *ngIf="!showBookList">
+    <!-- On selection of the book. The book is loaded -->
+    <div class="display">
+      <angular-epub-viewer
+      #epubViewer
+      [ngStyle]="{height:'80vh', width: '100vw', display: 'inline-block'}"> >
+    </angular-epub-viewer>
+  </div>
+  <div class="buttons">
+    <!-- these are the buttons used to change the page inside the book viewer -->
+    <button class="prevPage button style-button" (click)="epubViewer.previousPage()">Previous Page</button>
+    <button class="nextPage button style-button" (click)="epubViewer.nextPage()">Next Page</button>
+  </div>
+  </div>
+</div>

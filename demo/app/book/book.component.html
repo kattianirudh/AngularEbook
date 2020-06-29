@@ -1,0 +1,19 @@
+<!-- This is the component that displays the individual book -->
+<div class="book-component mb-20">
+  <div class="book-title mb-10">
+    <b>{{book.name}}</b>
+  </div>
+  <!-- Clicking on this opens the book reader -->
+  <div class="book-options mb-5">
+    <button class="read-book style-button" (click)="readBook()">
+      Read
+    </button>
+    <button class="delete-book style-button" (click)="deleteBook()">
+      Delete
+    </button>
+    <button class="bookmark style-button" (click)="bookmark($event)" *ngIf="!bookmarkFlag">
+      Bookmark
+    </button>
+  </div>
+</div>
+

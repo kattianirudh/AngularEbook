@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation, Input} from '@angular/core';
 import {AngularEpubViewerComponent} from "../../libs/angular-epub-viewer/src/angularEpubViewer.component";
 import {
     EpubChapter,
@@ -24,6 +24,9 @@ export class AppComponent implements OnInit {
     picker: ElementRef;
     @ViewChild('metadata', {read: ElementRef})
     metadata: ElementRef;
+
+    bookCollection: any[] = [];
+
 
     unzippedBooks: Book[] = [].concat(UNZIPPED_BOOKS);
     zippedBooks: Book[] = [].concat(ZIPPED_BOOKS);
